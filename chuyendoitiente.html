@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<span>currency</span>
+<br>
+<input type="text" name="amount" id="currency">
+
+<span>from</span>
+<select id="from">
+    <option id="fromvnd">VND</option>
+    <option id="fromusd">USD</option>
+</select>
+
+<span>to</span>
+<select id="to">
+    <option id="tovnd">VND</option>
+    <option id="tousd">USD</option>
+</select>
+
+<button onclick="change();">Change</button>
+
+<script>
+   function change(){
+       let x = parseInt(document.getElementById('currency').value);
+       let from = document.getElementById('from').value;
+       let to = document.getElementById('to').value;
+       let fromvnd = document.getElementById('fromvnd').value;
+       let fromusd = document.getElementById('fromusd').value;
+       let tovnd = document.getElementById('tovnd').value;
+       let tousd = document.getElementById('tousd').value;
+       let resault;
+       switch (from) {
+           case fromvnd:
+               (to==tovnd)? null:(resault=x/23000)
+               alert(resault);
+               break;
+           case fromusd:
+               (to==tousd)? null : (resault=x*23000)
+               alert(resault);
+               break;
+       }
+   }
+</script>
+
+</body>
+</html>
